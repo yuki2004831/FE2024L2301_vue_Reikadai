@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/style.css">
+   <title>例題・課題</title>
+</head>
+
+<body>
+   <div id="app">
+      <div>
+         <!--★穴埋め★ h3タグの見出しを完成させる
+            クラスバインディングを利用する（isChangedがtrueの場合にis-changedクラスを適用する）
+            テキスト部分にはanimalのデータをバインディングする-->
+         <h3 XXXXXXXX>XXXXXXXXカードがひけるよ🐶🐱</h3>
+         <!-- ★穴埋め★ クリック時に見出しスタイルを変更するメソッドの呼び出し -->
+         <button XXXXXXXX style="background-color: azure;">👆見出しスタイル変更</button>
+         <!-- ★穴埋め★ クリック時に動物切り替えメソッドの呼び出し -->
+         <button XXXXXXXX style="background-color: bisque;margin-left: 30px;">動物切り替え🔄</button>
+      </div>
+      <!-- ★穴埋め★ クリック時にカードをひくメソッドの呼び出し -->
+      <button XXXXXXXX style="background-color: yellow; font-size: 21px; margin-top: 20px;">カードをひく✨</button>
+
+      <div v-if="selectedCards.length">
+         <div class="card-container">
+            <!-- ★穴埋め★ リストレンダリングを利用する（selectedCardsの中身をcardに入れる） -->
+            <div XXXXXXXX :key="index" class="card">
+            <!-- ★穴埋め★ imgタグのsrc属性に画像のパスをバインディングする -->
+               <img XXXXXXXX :alt="card.name" class="card-image" />
+            </div>
+         </div>
+         <br>カードをひいた後のお気持ちは・・・？
+         <p>癒され度:
+            <!-- ★穴埋め★ 双方向バインディングを利用する -->
+            <input type="range" XXXXXXXX max="100" min="1" />
+            {{scale}}％
+         </p>
+         <p>♥の色:
+            <!-- ★穴埋め★ 双方向バインディングを利用する -->
+            <input type="range" XXXXXXXX max="255" min="1" />
+            →赤強
+         </p>
+         <!-- ★穴埋め★ pタグにスタイルバインディング（bindStyle）を適用する -->
+         <p XXXXXXXX>♥</p>
+      </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script src="./script/script.js"></script>
+</body>
